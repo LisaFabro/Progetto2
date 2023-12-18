@@ -3,10 +3,11 @@ import java.util.Iterator;
 import java.util.List;
 public class CartManager {
 
-    static List<Device> deviceToCart = Warehouse.deviceList;
+    static DemoItems demoItems = new DemoItems();
+    static List<Device> deviceToCart = demoItems.getDeviceList() ;
     static Cart cart = new Cart();
 
-    public void intoCart(int id) {
+    public static void intoCart(int id) {
 
         Iterator<Device> iterator = deviceToCart.listIterator();
         while (iterator.hasNext()) {
